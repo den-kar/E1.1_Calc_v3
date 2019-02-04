@@ -12,7 +12,7 @@ def getCalcOperation():
 def getNumber(n,calcOp):
     while True:
         try:
-            number = float(input("Ganze Zahl " + str(n) + "          : "))
+            number = float(input("Eingabe Zahl " + str(n) + "        : "))
             if calcOp == "!" and (number < 0 or number != int(number)):
                 print ("Faktultät nur mit ganzen Zahlen größer gleich 0. Nochmal")
                 continue
@@ -20,7 +20,7 @@ def getNumber(n,calcOp):
                 print ("Nicht durch 0 teilbar. Nochmal")
                 continue
         except ValueError:
-            print ("Das war keine ganze Zahl. Nochmal")
+            print ("Das war keine Zahl. Nochmal")
             continue
         else:
             break
