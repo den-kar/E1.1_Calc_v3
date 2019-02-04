@@ -27,18 +27,15 @@ def getNumber(n,calcOp):
     return number
 
 def calculation(number1,number2,calcOp):
-    while True:
-        if calcOp == "!":
-            erg = 1
-            number1 = int(number1)
-            for i in range(2,number1+1):
-                erg *= i
-            print ("Ergebis               : " + str(erg))
-            break
-        else:
-            erg = eval(str(number1) + calcOp + str(number2))
-            print ("Ergebis               : " + str(erg))
-            break
+    if calcOp == "!":
+        erg = 1
+        number1 = int(number1)
+        for i in range(2,number1+1):
+            erg *= i
+        print ("Ergebis               : " + str(erg))
+    else:
+        erg = eval(str(number1) + calcOp + str(number2))
+        print ("Ergebis               : " + str(erg))
 
 while True:
     print ("""
