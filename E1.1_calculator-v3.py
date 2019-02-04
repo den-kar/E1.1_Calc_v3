@@ -12,9 +12,9 @@ def getCalcOperation():
 def getNumber(n,calcOp):
     while True:
         try:
-            number = int(input("Ganze Zahl " + str(n) + "          : "))
-            if calcOp == "!" and number < 0:
-                print ("Faktultät nur mit Zahlen größer gleich 0. Nochmal")
+            number = float(input("Ganze Zahl " + str(n) + "          : "))
+            if calcOp == "!" and (number < 0 or number != int(number)):
+                print ("Faktultät nur mit ganzen Zahlen größer gleich 0. Nochmal")
                 continue
             elif calcOp == "/" and number == 0:
                 print ("Nicht durch 0 teilbar. Nochmal")
@@ -30,6 +30,7 @@ def calculation(number1,number2,calcOp):
     while True:
         if calcOp == "!":
             erg = 1
+            number1 = int(number1)
             for i in range(2,number1+1):
                 erg *= i
             print ("Ergebis               : " + str(erg))
@@ -58,5 +59,3 @@ Nein          [any key]
 """)
     if restartCalculation.lower() not in restartInputList:
         break
-
-
